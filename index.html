@@ -9,29 +9,36 @@
   </head>
   <body>
     <section class="main-section">
-      <div class="active">
-        <h2>Player 1</h2>
-        <h1 class="score"  id="score2">0</h1>
-        <div class="curent-score">
+      <div class="player active">
+        <h2 class="player-name">Player 1</h2>
+        <h1 id="score1">0</h1>
+        <div>
           <p>curent</p>
-          <h4>0</h4>
+          <h4 class="curent-score">0</h4>
         </div>
       </div>
 
-      <div>
-        <h2>Player 2</h2>
+      <div class="player">
+        <h2 class="player-name">Player 2</h2>
         <h1 class="score" id="score2">0</h1>
-        <div class="curent-score">
+        <div>
           <p>curent</p>
-          <h4>0</h4>
+          <h4 class="curent-score">0</h4>
         </div>
       </div>
 
       <img src="dice-1.png" class="dice-img" width="50" height="50" />
-      <button class="start-btn">start</button>
+      <button class="start-btn">play again</button>
       <button class="roll-btn">roll the dice</button>
       <button class="hold-btn">hold</button>
     </section>
+
+    <div class="modal-body">
+      <p class="modal-content">Hello Player1, what's your name?</p>
+      <input type="text" id="playerName" />
+      <button class="submit-btn">OK</button>
+    </div>
+    <div class="overlay"></div>
     <script src="rolling.js"></script>
   </body>
 </html>
