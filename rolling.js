@@ -50,6 +50,10 @@ const starting = () => {
   scoreDice2.textContent = 0;
   scoresDice[0].textContent = 0;
   scoresDice[1].textContent = 0;
+  playerSection[0].classList.remove("winer");
+  playerSection[1].classList.remove("winer");
+  playerSection[0].classList.add("active");
+  playerSection[1].classList.remove("active");
 };
 
 // get the name of players
@@ -101,7 +105,7 @@ rollBtn.addEventListener("click", () => {
       document.getElementById(`score${activePlayer + 1}`).textContent =
         players[`player${activePlayer + 1}score`];
 
-      if (players[`player${activePlayer + 1}score`] >= 18) wining();
+      if (players[`player${activePlayer + 1}score`] >= 100) wining();
       else switchPlayer();
     }
   }, 700);
@@ -118,7 +122,7 @@ holdBtn.addEventListener("click", () => {
   document.getElementById(`score${activePlayer + 1}`).textContent =
     players[`player${activePlayer + 1}score`];
 
-  if (players[`player${activePlayer + 1}score`] >= 18) wining();
+  if (players[`player${activePlayer + 1}score`] >= 100) wining();
   else switchPlayer();
 });
 
