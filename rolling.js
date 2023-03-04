@@ -98,12 +98,12 @@ rollBtn.addEventListener("click", () => {
     } else {
       playerSection[activePlayer].classList.remove("active");
 
-      players[`player${activePlayer + 1}score`] +=
-        players[`player${activePlayer + 1}curentScore`];
+    //   players[`player${activePlayer + 1}score`] +=
+    //     players[`player${activePlayer + 1}curentScore`];
       players[`player${activePlayer + 1}curentScore`] = 0;
       scoresDice[activePlayer].textContent = 0;
-      document.getElementById(`score${activePlayer + 1}`).textContent =
-        players[`player${activePlayer + 1}score`];
+    //   document.getElementById(`score${activePlayer + 1}`).textContent =
+    //     players[`player${activePlayer + 1}score`];
 
       if (players[`player${activePlayer + 1}score`] >= 100) wining();
       else switchPlayer();
